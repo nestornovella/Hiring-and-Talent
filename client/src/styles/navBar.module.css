@@ -1,0 +1,39 @@
+.container{
+    position: fixed top;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    margin: 0%;
+    align-items: center;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    backdrop-filter: blur(10px);
+    background-color: var(--backgrounNavBar);
+
+}
+.logo{
+    background: url('../img/hiring-and-talent.png');
+    background-size: cover;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    border: none;
+    outline: none;
+}
+.menuButton{
+    background: url('../img/menu.png');
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 35px;
+    border: none;
+    outline: none;
+}
+
+.menuButton:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    cursor: pointer;
+}

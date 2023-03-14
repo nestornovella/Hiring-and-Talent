@@ -1,0 +1,47 @@
+:root {
+    --backgrounNavBar: rgba(236, 236, 236, 0.913);
+
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: end;
+}
+
+.containerDisabled {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 10%;
+    margin-left: 90%;
+    padding: 30px;
+    background-color: var(--backgrounNavBar);
+    transform: translateY(-200%);
+    transition: 3s;
+    opacity: 0.1;
+}
+
+.container{
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 10%;
+    padding: 30px;
+    background-color: var(--backgrounNavBar);
+    opacity: 1;
+    transform: translateY(0%);
+    transition:  3s ease-in-out all;
+}
+
+.container ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+

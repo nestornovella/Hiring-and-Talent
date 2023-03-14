@@ -1,14 +1,26 @@
-import Styles from './styles/app.module.css'
-import logo from './img/hiring-and-talent.jpg'
-import equip from './img/equip-working.png'
+
+import { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import DropBox from './components/dropBox';
+import NavBar from './components/navBar';
 
 function App() {
+  
+  const [droped, setDroped] = useState(false)
+
+  function dropBox (){
+    setDroped(prev => !prev)
+  }
+
   return (
-    <div className={Styles.container}>
-     
-      <img width={200} src={logo} alt='logo' />
-      <img width={500} src={equip} alt={"equip"}/>
-    </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path={"/"}>
+            <NavBar onDrop={dropBox}/>
+            <DropBox droped={droped}/>
+          </Route>
+        </Switch>
+      </BrowserRouter>
   );
 }
 
