@@ -1,15 +1,5 @@
-const express = require('express')
-const cors = require('cors')
-const morgan = require('morgan')
-const router = require('./src/routes/indexRoutes')
+"use strict"; // Uso modo estricto para depurar errores silenciosos de JavaScript
+const server = require("./src/server");
+const port = process.env.PORT || 3001;
 
-const app = express()
-app.use(cors())
-app.use(morgan('dev'))
-app.use(express.json())
-app.use('/', router)
-
-const PORT = process.env.PORT || 3001
-
-
-app.listen(PORT, ()=> console.log(`listen in port ${PORT}`))
+server.listen(port, () => console.log(`Connection ok in port ${port}`));

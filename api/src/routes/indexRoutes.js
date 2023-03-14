@@ -1,9 +1,10 @@
-const { Router } = require('express')
+"use strict";
+const { Router } = require("express");
 
+const router = Router();
 
-const router = Router()
+router.get("/", (req, res) => {
+  res.json({ funciona: "funciona" });
+});
 
-router.get("/", (req, res)=>{res.json({funciona:"funciona"})})
-
-
-module.exports = router
+module.exports = router;
