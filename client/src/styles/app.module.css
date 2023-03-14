@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     height: 90vh;
     flex-direction: column;
@@ -6,7 +6,19 @@
     align-items: center;
     text-align: center;
     animation: logoAnimation 3s;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 50px;
 }
 
-
+img {
+  margin: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+}
 
