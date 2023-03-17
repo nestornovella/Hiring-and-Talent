@@ -1,6 +1,7 @@
 .container{
-    position: fixed top;
-    width: 98%;
+    position: fixed;
+    top: 0px;
+    width: calc(100vw - 30px) ;
     display: flex;
     justify-content: space-between;
     height: 70px;
@@ -9,8 +10,8 @@
     padding: 0px;
     padding-left: 15px;
     padding-right: 15px;
-    backdrop-filter: blur(10px);
     background-color: var(--backgrounNavBar);
+    z-index: 100;
 
 }
 .logo{

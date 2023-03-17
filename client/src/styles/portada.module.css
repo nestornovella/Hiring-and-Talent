@@ -1,0 +1,45 @@
+.container{
+    color: var(--colorHerring) ;
+    margin-top: 120px;
+    text-align: center;
+    font-size: 35px;
+}
+.container h1{
+    margin-bottom: 35px;
+}
+
+
+.container h3{
+    margin: 0px;
+    padding: 0px;
+    color: var(--greyText);
+    height: 80px;
+}
+
+.registerButton{
+    background-color: var(--colorHerring);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 50px;
+    border: solid white;
+    outline: none;
+}
+
+
+.containerButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.containerButtons button:hover{
+    cursor: pointer;
+    background-color: var(--backgrounNavBar);
+    color: var(--colorHerring);
+    border: none;
+    transition: all .9s;
+    border: solid var(--colorHerring);
+}
