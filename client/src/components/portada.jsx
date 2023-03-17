@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Styles from '../styles/portada.module.css'
 import Typed from 'typed.js'
+import { cargarImagen, cargarTitulo } from '../functions/intersectinFunctions/intersext';
 
 function Portada() {
 
@@ -24,10 +25,33 @@ function Portada() {
          loop: false
       })
    }, [])
+
+ 
+
+
+
+function observator (id, call){
+      
+
+   return  new IntersectionObserver(call, {
+      rootMargin: "0px 0px 0px 0px",
+  }).observe(document.getElementById(id))
+}
+
+  useEffect(() => { 
+   observator('title',cargarTitulo)
+   })
+   useEffect(()=>{
+
+      observator('presentation',cargarImagen)
+   })
+   
    return (
       <div className={Styles.container}>
-         <h1>Hiring<span> and</span> Talent</h1>
-         <img className={Styles.reunion} src={require('../carrusel/imagen-reunion.avif')} alt="" />
+         <div id='title' className={Styles.invisibleTitle}>
+         <h1  >Hiring and Talent</h1>
+         </div>
+         <img id='presentation' className={Styles.invisible} src={require('../carrusel/imagen-reunion.avif')} alt="" />
          <h3><span ref={el}></span></h3>
          <div className={Styles.containerButtons}>
             <button className={Styles.registerButton}>Registra tu hoja de vida</button>
