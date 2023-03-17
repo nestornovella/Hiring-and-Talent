@@ -1,8 +1,10 @@
 
 import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Carrusel from './components/carrusel';
 import DropBox from './components/dropBox';
 import NavBar from './components/navBar';
+import Portada from './components/portada';
 
 function App() {
   
@@ -14,10 +16,15 @@ function App() {
 
   return (
       <BrowserRouter>
-        <Switch>
-          <Route path={"/"}>
             <NavBar onDrop={dropBox}/>
-            <DropBox droped={droped}/>
+            <DropBox droped={droped} onDrop={dropBox}/>
+        <Switch>
+          <Route exact path={"/"}>
+            <Portada/>
+            <Carrusel/>
+          </Route>
+          <Route path={"/nosotros"}>
+
           </Route>
         </Switch>
       </BrowserRouter>
