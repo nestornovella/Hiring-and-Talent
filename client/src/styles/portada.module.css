@@ -1,9 +1,11 @@
 .container{
     color: var(--colorHerring) ;
     margin-top: 120px;
+    margin-bottom: 200px;
     text-align: center;
     font-size: 35px;
 }
+
 
 
 .container h3{
@@ -49,9 +51,23 @@
     transition: all 2s;
 
 }
-.invisibleTitle h1{
+.visibleTitle img{
+    margin-bottom: 35px;
+    transform: translateX(0px)rotate(0deg);
+    transition: all 2s;
+
+}
+.invisibleTitle h1 {
     margin-bottom: 35px;
     transform: translateY(-500px);
+
+    transition: all .3s;
+
+}
+
+.invisibleTitle img {
+    margin-bottom: 35px;
+    transform: translateX(500px) rotate(180deg);
     transition: all .3s;
 
 }

@@ -14,7 +14,7 @@ function Portada() {
             "Reclutamiento y selección",
             "Asesoría de bienestar",
             "Desarrollo de páginas web y app",
-            "👇A un click de tu próximo empleo👇",
+            "A un click de tu próximo empleo",
             "El mejor equipo de profesionales"],
          startDelay: 300,
          typeSpeed: 30,
@@ -26,30 +26,29 @@ function Portada() {
       })
    }, [])
 
- 
 
 
 
-function observator (id, call){
-      
 
-   return  new IntersectionObserver(call, {
-      rootMargin: "0px 0px 0px 0px",
-  }).observe(document.getElementById(id))
-}
+   function observator(id, call) {
 
-  useEffect(() => { 
-   observator('title',cargarTitulo)
-   })
-   useEffect(()=>{
 
-      observator('presentation',cargarImagen)
-   })
-   
+      return new IntersectionObserver(call, {
+         rootMargin: "0px 0px 0px 0px",
+      }).observe(document.getElementById(id))
+   }
+
+
+   useEffect(() => {
+      observator('title', cargarTitulo)
+      observator('presentation', cargarImagen)
+   }, [])
+
    return (
       <div className={Styles.container}>
          <div id='title' className={Styles.invisibleTitle}>
-         <h1  >Hiring and Talent</h1>
+            <h1  >Hiring and Talent</h1>
+            <img src={require('../img/hiring-and-talent.png')} alt="hiring-logo" />
          </div>
          <img id='presentation' className={Styles.invisible} src={require('../carrusel/imagen-reunion.avif')} alt="" />
          <h3><span ref={el}></span></h3>

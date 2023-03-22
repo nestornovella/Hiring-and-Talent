@@ -1,0 +1,13 @@
+
+
+
+.mainContainer{
+    display: grid;
+    margin-right: 10%;
+    margin-left: 10%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    column-gap: 100px;
+
+
+}

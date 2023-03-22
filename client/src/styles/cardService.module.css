@@ -1,0 +1,68 @@
+
+
+.mainContainer{
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 8px;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    position: relative;
+    background-color: rgb(246, 239, 239);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 25px 25px 20px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px 10px 2px grey;
+}
+
+.container{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 260px;  
+}
+
+.container h3{
+    font-size: 20px;
+}
+
+.avatar{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+
+    border-radius: 50%;
+    left: calc(50% - 45px);
+    top: -45px;
+    z-index: 9;
+}
+
+.content{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.97);
+    overflow: scroll;
+    font-size: 18px;
+    height: 200px;
+
+}
+.content::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    background-color: grey;
+    display: none;
+  }
+
+  .buttonContainer button{
+    width: 30px;
+    height: 30px;
+    background: url('../img/start.png');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+.buttonContainer{
+    margin-top: 10px;
+  }

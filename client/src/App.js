@@ -5,6 +5,7 @@ import Carrusel from './components/carrusel';
 import DropBox from './components/dropBox';
 import NavBar from './components/navBar';
 import Portada from './components/portada';
+import ServicesRender from './components/services.render';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path={"/"}>
             <Portada/>
+            <ServicesRender/>
             <Carrusel/>
           </Route>
           <Route path={"/nosotros"}>
